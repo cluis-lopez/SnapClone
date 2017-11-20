@@ -14,7 +14,7 @@ def CreateGafas(imagen, izq, der):
     izqy = izq[1]
     derx = der[0]
     
-    ratio = abs((derx - izqx)/270.0)
+    ratio = abs((derx - izqx)/270.0) # La anchura de las gafas en el fichero original en pixels
     izqx = int(izqx - (60 * ratio))
     izqy = int(izqy - (30 * ratio))
     

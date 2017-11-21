@@ -20,7 +20,7 @@ faceCascade = cv2.CascadeClassifier(faceCascPath)
 eye_cascade = cv2.CascadeClassifier(eyeCascPath)
 
 keepglasses = 0 # frames without eye detection while we keep the glasses on
-oldeyes = 0 # just to initialize the variable
+oldeyes = None # just to initialize the variable
 
 while(True):
     # Capture frame-by-frame
@@ -29,8 +29,6 @@ while(True):
     gray = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY) # Make pict B&W
     
     faces = faceCascade.detectMultiScale(gray, 1.3, 5)
-    print type(faces)
-    print faces
 
     print "Found {0} faces!".format(len(faces))
     

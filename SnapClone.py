@@ -79,7 +79,9 @@ def main(CROWN, GLASSES, MOUSTACHE):
     cv2.destroyAllWindows()
 
 def usage():
-    print "Usage TestArgs -s <sticker> -h"
+    print "Usage python SnapClone.py -s <sticker> where sticker may be any of 'corona', 'bigote' or 'gafas'"
+    print ""
+    print "Example: python SnapClone.py -s corona - s bigote"
     sys.exit(-1)  
     
 if __name__ == '__main__':
